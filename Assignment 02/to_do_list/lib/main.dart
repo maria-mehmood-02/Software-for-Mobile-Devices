@@ -29,7 +29,13 @@ class MyForm extends StatefulWidget {
 
 class _MyFormState extends State<MyForm> {
   final textController = TextEditingController();
-  late String text;
+  bool _isVisible = false;
+
+  List<Widget> list = [
+    Container(
+      height: 32.0,
+    )
+  ];
 
   @override
   void dispose() {
@@ -61,27 +67,38 @@ class _MyFormState extends State<MyForm> {
                   height: 100,
                   child: ElevatedButton.icon(
                     onPressed: () {
-                      print(textController.text);
-                      text = textController.text;
+                      setState(() {
+                        list.add(Padding(
+                          padding: const EdgeInsets.only(left: 400),
+                          child: ListTile(
+                            leading: Icon(Icons.circle),
+                            title: Text("textController.text"),
+                          ),
+                        ));
+                        _isVisible = true;
+                      });
                     },
-                    // onPressed: () => {
-                    //   print(textController.text),
-                    // },
                     label: Text("Add"),
                     icon: Icon(Icons.add),
                   )),
             ],
           ),
-          Expanded(
-              child: ListView(
-            children: const [
-              ListTile(
-                title: Text(text),
-              ),
-            ],
-          ))
+          Visibility(
+              visible: _isVisible,
+              child: Column(
+                children: _myList(),
+              ))
         ],
       ),
     );
+  }
+
+  List<Widget> _myList() {
+
+    for (var i = 0; i < list.length; i++) {
+      list.elementAt(i);
+    }
+
+    return list;
   }
 }
