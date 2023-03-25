@@ -57,21 +57,21 @@ class _MyAppState extends State<MyApp> {
                     'User Id: ${snapshot.data!.userId}',
                     style: const TextStyle(
                         fontSize: 16,
-                        color: Colors.black,
+                        color: Colors.deepPurpleAccent,
                         decoration: TextDecoration.none),
                   ),
                   Text(
                     'Id: ${snapshot.data!.id}',
                     style: const TextStyle(
                         fontSize: 16,
-                        color: Colors.black,
+                        color: Colors.deepPurpleAccent,
                         decoration: TextDecoration.none),
                   ),
                   Text(
                     'Title: ${snapshot.data!.title}',
                     style: const TextStyle(
                         fontSize: 16,
-                        color: Colors.black,
+                        color: Colors.deepPurpleAccent,
                         decoration: TextDecoration.none),
                   ),
                 ],
