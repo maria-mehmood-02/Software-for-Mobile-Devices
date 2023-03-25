@@ -42,7 +42,11 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Center(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Auto Generated Searialization"),
+        ),
+        body: Center(
         child: FutureBuilder<Album>(
           future: futureAlbum,
           builder: (context, snapshot) {
@@ -80,6 +84,7 @@ class _MyAppState extends State<MyApp> {
             return const CircularProgressIndicator();
           },
         ),
+      ),
       ),
     );
   }
