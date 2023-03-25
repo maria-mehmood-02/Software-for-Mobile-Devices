@@ -156,22 +156,29 @@ class Post extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-    Column(
-      // ignore: prefer_const_literals_to_create_immutables
-      children: [
-        Image.asset(
-          'images/image1.jpg',
-          height: 200,
-          width: 200,
-        ),
-        const ListTile(
-          // leading: Image.asset('images/image1.jpg'),
-          title: Text("Properity"),
-          subtitle: Text("Kxnt"),
-          trailing: Icon(Icons.favorite_border),
-        )
-      ],
+    return SizedBox(
+      child: Column(
+        // ignore: prefer_const_literals_to_create_immutables
+        children: [
+          Image.asset(
+            'images/image1.jpg',
+            height: 200,
+            width: 200,
+          ),
+          const Text("Properity"),
+          const Text("Kxnt"),
+          const Icon(
+            Icons.favorite_border,
+          ),
+
+          // const ListTile(
+          //   // leading: Image.asset('images/image1.jpg'),
+          //   title: Text("Properity"),
+          //   subtitle: Text("Kxnt"),
+          //   trailing: Icon(Icons.favorite_border),
+          // )
+        ],
+      ),
     );
   }
 }
