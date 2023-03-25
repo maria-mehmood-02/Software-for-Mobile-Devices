@@ -17,11 +17,4 @@ class Album {
   });
 
   factory Album.fromJson(Map<String, dynamic> json) => _$AlbumFromJson(json);
-  //  {
-  //   return Album(
-  //     userId: json['userId'],
-  //     id: json['id'],
-  //     title: json['title'],
-  //   );
-  // }
 }
